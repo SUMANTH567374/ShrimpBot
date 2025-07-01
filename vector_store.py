@@ -33,7 +33,7 @@ class ChunkRetriever:
             self.vector_store = FAISS.load_local(
                 persist_dir,
                 self.embeddings,
-                allow_dangerous_deserialization=True  # ✅ Trusted loading of serialized FAISS index
+                allow_dangerous_deserialization=True  
             )
         else:
             self.vector_store = self._create_and_save_index()
