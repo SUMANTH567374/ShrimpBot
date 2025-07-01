@@ -16,21 +16,7 @@ ShrimpBot is an interactive terminal-based AI assistant that answers questions r
 
 🗂️ Project Structure
 
-
-ShrimpBot/
-├── main.py                     # CLI entry point
-├── llm_synthesis.py           # Combines SOP, tools, and question to generate response
-├── vector_store.py            # Handles SOP chunking and FAISS vector search
-├── tools/                     # Custom tool functions (e.g., water quality, temperature)
-├── tool_registry.json         # Maps tool names to their function paths
-├── models/
-│   ├── llm_router.py          # Routes to Flan or Gemini backend
-│   ├── llm_flan.py            # Local Flan-T5 inference
-│   ├── llm_gemini.py          # Cloud-based Gemini inference
-├── prompts/
-│   ├── retrieval.txt          # Prompt for optional question refinement
-│   └── synthesis.txt          # Prompt template for final answer
-└── sop_docs.txt               # SOP knowledge base text file
+![alt text](image.png)
 
 🚀 How It Works
 
