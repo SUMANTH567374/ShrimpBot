@@ -45,7 +45,5 @@ ShrimpBot is an interactive terminal-based AI assistant that answers questions r
 
 ## 💡 Future Improvements
 
-- 🔄 Add feedback loops and evaluation metrics  
-- 🚀 Use 4-bit or 8-bit quantized models to run larger LLMs locally  
-- 🧠 Consider fine-tuning Flan-T5 on domain-specific data for better accuracy  
+- 🚀 Use 4-bit or 8-bit quantized models to run larger LLMs locally    
 - 🖥️ Upgrade to 16–32 GB RAM + GPU to handle larger models efficiently
