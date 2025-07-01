@@ -10,7 +10,7 @@ def clear_screen():
     os.system("cls" if os.name == "nt" else "clear")
 
 def main():
-    console.print("\n🤠 [bold cyan]Welcome to ShrimpBot![/bold cyan] Ask me hatchery SOP questions.\nType [yellow]'exit'[/yellow] to quit or [green]'help'[/green] to see available commands.\n")
+    console.print("\n [bold cyan]Welcome to ShrimpBot![/bold cyan] Ask me hatchery SOP questions.\nType [yellow]'exit'[/yellow] to quit or [green]'help'[/green] to see available commands.\n")
 
     while True:
         try:
