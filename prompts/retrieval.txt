@@ -1,0 +1,7 @@
+Based on the SOPs below, identify the most relevant information to help answer the user's question.
+
+SOPs:
+{context}
+
+User Question:
+{question}

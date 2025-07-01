@@ -1,0 +1,7 @@
+{
+  "get_tank_disinfection_info": "tools.get_tank_disinfection_info",
+  "get_water_quality_info": "tools.get_water_quality_info",
+  "get_feeding_guidelines_info": "tools.get_feeding_guidelines_info",
+  "get_temperature_control_info": "tools.get_temperature_control_info",
+  "get_disease_control_info": "tools.get_disease_control_info"
+}
