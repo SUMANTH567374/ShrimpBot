@@ -6,12 +6,12 @@ from langchain_huggingface import HuggingFacePipeline
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
-# === Configuration ===
+# Configuration
 MODEL_NAME = "google/flan-t5-base"
 MAX_CONTEXT_CHARS = 1000
 MAX_TOOL_CHARS = 600
 
-# === Load FLAN-T5 model and tokenizer ===
+# Load FLAN-T5 model and tokenizer 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 model = AutoModelForSeq2SeqLM.from_pretrained(
     MODEL_NAME,
@@ -19,7 +19,7 @@ model = AutoModelForSeq2SeqLM.from_pretrained(
     device_map="auto" if torch.cuda.is_available() else None
 )
 
-# === Create HuggingFace text2text-generation pipeline ===
+# Create HuggingFace text2text-generation pipeline 
 text_gen_pipeline = pipeline(
     "text2text-generation",
     model=model,
@@ -31,20 +31,20 @@ text_gen_pipeline = pipeline(
     do_sample=True,
 )
 
-# === LangChain LLM wrapper ===
+# LangChain LLM wrapper
 llm = HuggingFacePipeline(pipeline=text_gen_pipeline)
 
-# === Load prompt templates ===
+# Load prompt templates 
 with open("prompts/retrieval.txt", "r", encoding="utf-8") as f:
     retrieval_prompt = PromptTemplate.from_template(f.read())
 
 with open("prompts/synthesis.txt", "r", encoding="utf-8") as f:
     synthesis_prompt = PromptTemplate.from_template(f.read())
 
-# === Output parser to convert generation to string ===
+# Output parser to convert generation to string 
 parser = StrOutputParser()
 
-# === LangChain chains for synthesis and retrieval ===
+# LangChain chains for synthesis and retrieval 
 synthesis_chain = synthesis_prompt | llm | parser
 retrieval_chain = retrieval_prompt | llm | parser
 
